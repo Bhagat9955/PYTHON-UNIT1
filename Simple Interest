@@ -1,0 +1,8 @@
+//Program 3: Simple Interest (SI = P*R*T/100)
+
+principal = float(input("Enter Principal Amount: "))
+rate = float(input("Enter Rate (%): "))
+time = float(input("Enter Time (years): "))
+
+simple_interest = (principal * rate * time) / 100
+print(f"Simple Interest: {simple_interest:.2f}")
