@@ -1,0 +1,32 @@
+//Write a Python Program to input marks of 4 subjects and display,Total, Percentage, Result and Grade. If student is fail (<40) in any
+subject then Result should be displayed as “FAIL” and Grade should be displayed as “With Held**”
+
+
+subjects = ['Math', 'Science', 'English', 'History']
+marks = []
+total = 0
+
+for subject in subjects:
+    mark = float(input(f"Enter marks for {subject}: "))
+    marks.append(mark)
+    total += mark
+
+percentage = (total / 400) * 100
+
+if min(marks) < 40:
+    result = "FAIL"
+    grade = "With Held**"
+else:
+    result = "PASS"
+    if percentage >= 90:
+        grade = "A"
+    elif percentage >= 80:
+        grade = "B"
+    elif percentage >= 70:
+        grade = "C"
+    elif percentage >= 60:
+        grade = "D"
+    else:
+        grade = "E"
+
+print(f"Total: {total}, Percentage: {percentage:.2f}%, Result: {result}, Grade: {grade}")
